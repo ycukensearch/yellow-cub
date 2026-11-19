@@ -88,7 +88,7 @@
 <body>
 <div class="game-container">
   <div class="top-bar">
-    <div class="player-tag">🎮 КУБ</div>
+    <div class="player-tag">🎮 ИГРОК</div>
     <div class="level-badge" id="levelBadge">УР. 1/15</div>
     <div class="score-badge">🧱 <span id="scoreDisplay">0</span></div>
   </div>
@@ -104,7 +104,7 @@
     </div>
     <div class="menu-screen" id="menuScreen">
       <h1>ЖЕЛТЫЙ КУБ ОНЛАЙН</h1>
-      <p>Специально для любителей браузерных игр</p>
+      <p>Специально для любителей браузерных платформеров</p>
       <button id="btnPlay">▶ ИГРАТЬ (15 уровней)</button>
       <button class="zombie" id="btnZombie">🧟 РЕЖИМ ЗОМБИ</button>
     </div>
@@ -749,7 +749,7 @@
     setTimeout(function(){
       if (currentLevel >= TOTAL_LEVELS){
         winTitle.textContent = '🎉 ВСЕ 15 УРОВНЕЙ ПРОЙДЕНЫ!';
-        winText.innerHTML = 'Молодец, Куб!<br>Общий счёт: <b>' + totalScore + '</b>';
+        winText.innerHTML = 'Молодец, Игрок!<br>Общий счёт: <b>' + totalScore + '</b>';
         nextBtn.textContent = 'В МЕНЮ';
       } else {
         winTitle.textContent = 'УРОВЕНЬ ' + currentLevel + ' ПРОЙДЕН!';
@@ -763,7 +763,7 @@
   function completeZombieMode(){
     winTitle.textContent = '🧟 РЕЖИМ ЗОМБИ ЗАВЕРШЁН!';
     var survived = Math.floor((performance.now() - survivalStartTime) / 1000);
-    winText.innerHTML = 'Егор, ты выжил <b>' + survived + ' сек</b>!<br>' +
+    winText.innerHTML = 'Игрок, ты выжил <b>' + survived + ' сек</b>!<br>' +
                         'Убито зомби: <b>' + zombiesKilled + '</b><br>' +
                         'Очки: <b>' + totalScore + '</b>';
     nextBtn.textContent = 'В МЕНЮ';
